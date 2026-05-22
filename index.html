@@ -345,6 +345,75 @@
       gap: 12px;
     }
 
+    .food-guide {
+      display: grid;
+      gap: 12px;
+    }
+
+    .food-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 16px;
+    }
+
+    .food-rank {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      font-size: 1.1rem;
+    }
+
+    .food-card h3 {
+      margin: 0;
+      font-size: 1.18rem;
+      line-height: 1.25;
+    }
+
+    .food-card p {
+      margin: 8px 0 0;
+      color: var(--muted);
+    }
+
+    .food-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .food-badge {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 5px 10px;
+      background: #fff8ed;
+      color: #6c4321;
+      font-size: 0.84rem;
+      font-weight: 750;
+      white-space: nowrap;
+    }
+
+    .food-badge.viral {
+      background: #fff0f1;
+      color: #9f2f3d;
+      border-color: #f1c4c9;
+    }
+
+    .food-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
     .restaurant {
       background: var(--panel);
       border: 1px solid var(--line);
@@ -595,6 +664,158 @@
           <div class="slot"><div class="time">18:00</div><div><h4>搭新幹線往東京 / 品川</h4><p>建議名古屋到品川，再轉 JR 山手線往新宿。</p><div class="video-links"><a class="video-link" href="https://www.youtube.com/results?search_query=Nagoya+to+Tokyo+Shinkansen+shorts">新幹線 Shorts</a><a class="video-link" href="https://www.tiktok.com/search?q=Nagoya%20to%20Tokyo%20Shinkansen">TikTok 預覽</a><a class="video-link" href="https://global.jr-central.co.jp/en/">JR 東海官方</a></div></div></div>
         </div>
       </article>
+    </section>
+
+    <section id="nagoya-food-guide">
+      <div class="section-head">
+        <div>
+          <h2>名古屋美食指南</h2>
+          <p class="section-note">依 PTT Food 食記與名古屋代表性整理，評選比重為特色、必吃程度、人氣；短影音只作為理解餐廳氛圍的輔助。</p>
+        </div>
+        <a class="button primary" href="https://www.google.com/maps/dir/?api=1&origin=Nagoya%20JR%20Gate%20Tower%20Hotel&destination=Cafe%20Gentiane%20Piyorin%20Nagoya%20Station&waypoints=Atsuta%20Horaiken%20Jingu%20Nagoya%7CYabaton%20Yabacho%20Honten%20Nagoya%7CYamamotoya%20Honten%20JR%20Central%20Towers%20Nagoya%7CSekai%20no%20Yamachan%20Meieki%20Nagoya%7CFuraibo%20Meieki%20Nagoya%7CMisen%20Yaba%20Nagoya%7CMenya%20Shishimaru%20Nagoya%7CBucyo%20Coffee%20Nagoya%7CHARBS%20Sakae%20Nagoya&travelmode=walking">開啟地圖</a>
+      </div>
+      <div class="food-guide">
+        <article class="food-card">
+          <div><div class="food-rank">1</div></div>
+          <div>
+            <h3>あつた蓬莱軒 神宮店</h3>
+            <div class="food-meta"><span class="food-badge">鰻魚飯三吃 / ひつまぶし</span><span class="food-badge">必吃：ひつまぶし</span><span class="food-badge viral">非網紅，老字號名店</span></div>
+            <p>名古屋代表級必吃。老字號、特色最強，適合放在 6/7 熱田神宮附近午餐。</p>
+            <div class="food-actions">
+              <a class="video-link" href="https://www.google.com/maps/search/?api=1&query=Atsuta%20Horaiken%20Jingu%20Nagoya">Google Maps</a>
+              <a class="video-link" href="https://www.houraiken.com/jingu/access.html">官方/介紹</a>
+              <a class="video-link" href="https://www.youtube.com/results?search_query=%E3%81%82%E3%81%A4%E3%81%9F%E8%93%AC%E8%8E%B1%E8%BB%92%20%E5%90%8D%E5%8F%A4%E5%B1%8B%20shorts">影片介紹</a>
+              <a class="video-link" href="https://www.tiktok.com/search?q=%E3%81%82%E3%81%A4%E3%81%9F%E8%93%AC%E8%8E%B1%E8%BB%92">TikTok 預覽</a>
+            </div>
+          </div>
+        </article>
+        <article class="food-card">
+          <div><div class="food-rank">2</div></div>
+          <div>
+            <h3>矢場とん 矢場町本店</h3>
+            <div class="food-meta"><span class="food-badge">味噌豬排</span><span class="food-badge">必吃：わらじとんかつ / 味噌豬排</span><span class="food-badge">觀光人氣店</span></div>
+            <p>紅味噌文化代表，味道濃、辨識度高，榮 / 大須動線上很順。</p>
+            <div class="food-actions">
+              <a class="video-link" href="https://www.google.com/maps/search/?api=1&query=Yabaton%20Yabacho%20Honten%20Nagoya">Google Maps</a>
+              <a class="video-link" href="https://www.yabaton.com/modules/shop/index.php?content_id=2">官方/介紹</a>
+              <a class="video-link" href="https://www.youtube.com/results?search_query=%E7%9F%A2%E5%A0%B4%E3%81%A8%E3%82%93%20%E5%90%8D%E5%8F%A4%E5%B1%8B%20shorts">影片介紹</a>
+              <a class="video-link" href="https://www.tiktok.com/search?q=%E7%9F%A2%E5%A0%B4%E3%81%A8%E3%82%93%20%E5%90%8D%E5%8F%A4%E5%B1%8B">TikTok 預覽</a>
+            </div>
+          </div>
+        </article>
+        <article class="food-card">
+          <div><div class="food-rank">3</div></div>
+          <div>
+            <h3>山本屋本店 JR Central Towers</h3>
+            <div class="food-meta"><span class="food-badge">味噌煮込みうどん</span><span class="food-badge">必吃：味噌煮込みうどん</span><span class="food-badge viral">非網紅，老字號</span></div>
+            <p>名古屋紅味噌鍋燒烏龍代表，位置在名古屋站樓上，雨天或晚餐很方便。</p>
+            <div class="food-actions">
+              <a class="video-link" href="https://www.google.com/maps/search/?api=1&query=Yamamotoya%20Honten%20JR%20Central%20Towers%20Nagoya">Google Maps</a>
+              <a class="video-link" href="https://yamamotoyahonten.co.jp/">官方/介紹</a>
+              <a class="video-link" href="https://www.youtube.com/results?search_query=%E5%B1%B1%E6%9C%AC%E5%B1%8B%E6%9C%AC%E5%BA%97%20%E5%90%8D%E5%8F%A4%E5%B1%8B%20shorts">影片介紹</a>
+              <a class="video-link" href="https://www.tiktok.com/search?q=%E5%B1%B1%E6%9C%AC%E5%B1%8B%E6%9C%AC%E5%BA%97%20%E5%90%8D%E5%8F%A4%E5%B1%8B">TikTok 預覽</a>
+            </div>
+          </div>
+        </article>
+        <article class="food-card">
+          <div><div class="food-rank">4</div></div>
+          <div>
+            <h3>世界の山ちゃん 名駅周邊店</h3>
+            <div class="food-meta"><span class="food-badge">手羽先雞翅</span><span class="food-badge">必吃：幻の手羽先</span><span class="food-badge">觀光人氣店</span></div>
+            <p>名古屋手羽先人氣連鎖，適合晚上想吃居酒屋氣氛、配飲料。</p>
+            <div class="food-actions">
+              <a class="video-link" href="https://www.google.com/maps/search/?api=1&query=Sekai%20no%20Yamachan%20Meieki%20Nagoya">Google Maps</a>
+              <a class="video-link" href="https://www.yamachan.co.jp/">官方/介紹</a>
+              <a class="video-link" href="https://www.youtube.com/results?search_query=%E4%B8%96%E7%95%8C%E3%81%AE%E5%B1%B1%E3%81%A1%E3%82%83%E3%82%93%20shorts">影片介紹</a>
+              <a class="video-link" href="https://www.tiktok.com/search?q=%E4%B8%96%E7%95%8C%E3%81%AE%E5%B1%B1%E3%81%A1%E3%82%83%E3%82%93">TikTok 預覽</a>
+            </div>
+          </div>
+        </article>
+        <article class="food-card">
+          <div><div class="food-rank">5</div></div>
+          <div>
+            <h3>風来坊 名駅周邊店</h3>
+            <div class="food-meta"><span class="food-badge">手羽先雞翅</span><span class="food-badge">必吃：手羽先唐揚</span><span class="food-badge viral">非網紅，偏在地老派</span></div>
+            <p>手羽先唐揚元祖系，和山ちゃん相比更老派在地，可以二選一。</p>
+            <div class="food-actions">
+              <a class="video-link" href="https://www.google.com/maps/search/?api=1&query=Furaibo%20Meieki%20Nagoya">Google Maps</a>
+              <a class="video-link" href="https://furaibou.com/">官方/介紹</a>
+              <a class="video-link" href="https://www.youtube.com/results?search_query=%E9%A2%A8%E6%9D%A5%E5%9D%8A%20%E5%90%8D%E5%8F%A4%E5%B1%8B%20shorts">影片介紹</a>
+              <a class="video-link" href="https://www.tiktok.com/search?q=%E9%A2%A8%E6%9D%A5%E5%9D%8A%20%E5%90%8D%E5%8F%A4%E5%B1%8B">TikTok 預覽</a>
+            </div>
+          </div>
+        </article>
+        <article class="food-card">
+          <div><div class="food-rank">6</div></div>
+          <div>
+            <h3>味仙 矢場店</h3>
+            <div class="food-meta"><span class="food-badge">台灣拉麵</span><span class="food-badge">必吃：台湾ラーメン</span><span class="food-badge viral">話題名店，非純網紅</span></div>
+            <p>名古屋發明的台灣拉麵，特色強、辛辣有記憶點，但口味可能兩極。</p>
+            <div class="food-actions">
+              <a class="video-link" href="https://www.google.com/maps/search/?api=1&query=Misen%20Yaba%20Nagoya">Google Maps</a>
+              <a class="video-link" href="https://sakaeminami.jp/shop/1095/">官方/介紹</a>
+              <a class="video-link" href="https://www.youtube.com/results?search_query=%E5%91%B3%E4%BB%99%20%E5%8F%B0%E6%B9%BE%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%20shorts">影片介紹</a>
+              <a class="video-link" href="https://www.tiktok.com/search?q=%E5%91%B3%E4%BB%99%20%E5%8F%B0%E6%B9%BE%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3">TikTok 預覽</a>
+            </div>
+          </div>
+        </article>
+        <article class="food-card">
+          <div><div class="food-rank">7</div></div>
+          <div>
+            <h3>麵家 獅子丸</h3>
+            <div class="food-meta"><span class="food-badge">拉麵</span><span class="food-badge">必吃：伊勢海老らぁめん</span><span class="food-badge">排隊人氣店</span></div>
+            <p>近名古屋站，PTT Food 提過日本拉麵百選，伊勢海老湯頭很有特色。</p>
+            <div class="food-actions">
+              <a class="video-link" href="https://www.google.com/maps/search/?api=1&query=Menya%20Shishimaru%20Nagoya">Google Maps</a>
+              <a class="video-link" href="https://www.hotpepper.jp/strJ004286793/">官方/介紹</a>
+              <a class="video-link" href="https://www.youtube.com/results?search_query=%E9%BA%BA%E5%AE%B6%20%E7%8D%85%E5%AD%90%E4%B8%B8%20%E5%90%8D%E5%8F%A4%E5%B1%8B%20shorts">影片介紹</a>
+              <a class="video-link" href="https://www.tiktok.com/search?q=%E9%BA%BA%E5%AE%B6%20%E7%8D%85%E5%AD%90%E4%B8%B8%20%E5%90%8D%E5%8F%A4%E5%B1%8B">TikTok 預覽</a>
+            </div>
+          </div>
+        </article>
+        <article class="food-card">
+          <div><div class="food-rank">8</div></div>
+          <div>
+            <h3>BUCYO Coffee</h3>
+            <div class="food-meta"><span class="food-badge">名古屋早餐 / 小倉紅豆吐司</span><span class="food-badge">必吃：小倉紅豆吐司</span><span class="food-badge viral">有打卡感，非純網紅</span></div>
+            <p>喫茶店文化代表，紅豆吐司很名古屋，離名古屋站不遠，適合 6/5 或 6/8 早餐。</p>
+            <div class="food-actions">
+              <a class="video-link" href="https://www.google.com/maps/search/?api=1&query=Bucyo%20Coffee%20Nagoya">Google Maps</a>
+              <a class="video-link" href="https://www.nagoya-info.jp/en/gourmet/detail/141/">官方/介紹</a>
+              <a class="video-link" href="https://www.youtube.com/results?search_query=Bucyo%20Coffee%20Nagoya%20shorts">影片介紹</a>
+              <a class="video-link" href="https://www.tiktok.com/search?q=Bucyo%20Coffee%20Nagoya">TikTok 預覽</a>
+            </div>
+          </div>
+        </article>
+        <article class="food-card">
+          <div><div class="food-rank">9</div></div>
+          <div>
+            <h3>HARBS 榮本店</h3>
+            <div class="food-meta"><span class="food-badge">水果千層蛋糕</span><span class="food-badge">必吃：水果千層蛋糕</span><span class="food-badge viral">社群/甜點打卡熱門</span></div>
+            <p>名古屋甜點代表，榮 / Oasis 21 動線順，適合下午茶或夜景前休息。</p>
+            <div class="food-actions">
+              <a class="video-link" href="https://www.google.com/maps/search/?api=1&query=HARBS%20Sakae%20Nagoya">Google Maps</a>
+              <a class="video-link" href="https://www.harbs.co.jp/">官方/介紹</a>
+              <a class="video-link" href="https://www.youtube.com/results?search_query=HARBS%20Sakae%20Nagoya%20shorts">影片介紹</a>
+              <a class="video-link" href="https://www.tiktok.com/search?q=HARBS%20Sakae%20Nagoya">TikTok 預覽</a>
+            </div>
+          </div>
+        </article>
+        <article class="food-card">
+          <div><div class="food-rank">10</div></div>
+          <div>
+            <h3>Café Gentiane / Piyorin</h3>
+            <div class="food-meta"><span class="food-badge">小雞布丁蛋糕</span><span class="food-badge">必吃：Piyorin 小雞布丁</span><span class="food-badge viral">明顯網紅/打卡甜點</span></div>
+            <p>名古屋站超高辨識度甜點，買得到就很適合當伴手禮或拍照點。</p>
+            <div class="food-actions">
+              <a class="video-link" href="https://www.google.com/maps/search/?api=1&query=Cafe%20Gentiane%20Piyorin%20Nagoya%20Station">Google Maps</a>
+              <a class="video-link" href="https://www.nagoya-info.jp/zhtw/gourmet/detail/95/">官方/介紹</a>
+              <a class="video-link" href="https://www.youtube.com/results?search_query=Piyorin%20Nagoya%20shorts">影片介紹</a>
+              <a class="video-link" href="https://www.tiktok.com/search?q=Piyorin%20Nagoya">TikTok 預覽</a>
+            </div>
+          </div>
+        </article>
+      </div>
     </section>
 
     <section>
