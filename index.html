@@ -272,6 +272,33 @@
 
     .slot p { margin: 0; color: var(--muted); }
 
+    .video-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .video-link {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 6px 10px;
+      background: white;
+      color: var(--deep);
+      font-size: 0.86rem;
+      font-weight: 750;
+      text-decoration: none;
+    }
+
+    .video-link:hover,
+    .video-link:focus-visible {
+      border-color: var(--deep);
+      outline: none;
+    }
+
     .grid-two {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -540,13 +567,13 @@
           <span class="tag">避開 6/5 重複點</span>
         </div>
         <div class="timeline">
-          <div class="slot"><div class="time">09:30</div><div><h4>從飯店出發</h4><p>不用太早，先吃早餐再出門，保留隔天吉卜力的體力。</p></div></div>
-          <div class="slot"><div class="time">10:10</div><div><h4>熱田神宮</h4><p>從名鐵名古屋到神宮前站較順，早上走神社比較舒服。</p></div></div>
-          <div class="slot"><div class="time">11:45</div><div><h4>午餐：鰻魚飯或名古屋名物</h4><p>可在熱田周邊吃鰻魚飯；不想排隊就回名古屋站或往大須移動吃。</p></div></div>
-          <div class="slot"><div class="time">13:30</div><div><h4>名古屋城與本丸御殿</h4><p>下午主景點，記得名古屋城入場時間不要壓太晚。</p></div></div>
-          <div class="slot"><div class="time">15:30</div><div><h4>大須商店街</h4><p>逛街、小吃、甜點與藥妝，雨天也比戶外景點好調整。</p></div></div>
-          <div class="slot"><div class="time">17:30</div><div><h4>榮 / Oasis 21 夜景</h4><p>如果體力夠，傍晚去拍夜景；累了就直接回名古屋站。</p></div></div>
-          <div class="slot"><div class="time">19:00</div><div><h4>名古屋站晚餐與整理行李</h4><p>晚餐不要排太遠，回飯店整理 6/8 退房與吉卜力隨身包。</p></div></div>
+          <div class="slot"><div class="time">09:30</div><div><h4>從飯店出發</h4><p>不用太早，先吃早餐再出門，保留隔天吉卜力的體力。</p><div class="video-links"><a class="video-link" href="https://www.youtube.com/results?search_query=Nagoya+morning+travel+shorts">名古屋早晨 Shorts</a><a class="video-link" href="https://www.tiktok.com/search?q=Nagoya%20morning%20travel">TikTok 預覽</a></div></div></div>
+          <div class="slot"><div class="time">10:10</div><div><h4>熱田神宮</h4><p>從名鐵名古屋到神宮前站較順，早上走神社比較舒服。</p><div class="video-links"><a class="video-link" href="https://www.youtube.com/results?search_query=Atsuta+Jingu+Nagoya+shorts">熱田神宮 Shorts</a><a class="video-link" href="https://www.tiktok.com/search?q=Atsuta%20Jingu%20Nagoya">TikTok 預覽</a></div></div></div>
+          <div class="slot"><div class="time">11:45</div><div><h4>午餐：鰻魚飯或名古屋名物</h4><p>可在熱田周邊吃鰻魚飯；不想排隊就回名古屋站或往大須移動吃。</p><div class="video-links"><a class="video-link" href="https://www.youtube.com/results?search_query=Nagoya+hitsumabushi+shorts">鰻魚飯 Shorts</a><a class="video-link" href="https://www.youtube.com/results?search_query=Nagoya+meshi+shorts">名古屋名物 Shorts</a><a class="video-link" href="https://www.tiktok.com/search?q=Nagoya%20hitsumabushi">TikTok 預覽</a></div></div></div>
+          <div class="slot"><div class="time">13:30</div><div><h4>名古屋城與本丸御殿</h4><p>下午主景點，記得名古屋城入場時間不要壓太晚。</p><div class="video-links"><a class="video-link" href="https://www.youtube.com/results?search_query=Nagoya+Castle+Honmaru+Palace+shorts">名古屋城 Shorts</a><a class="video-link" href="https://www.tiktok.com/search?q=Nagoya%20Castle%20Honmaru%20Palace">TikTok 預覽</a><a class="video-link" href="https://www.nagoyajo.city.nagoya.jp/en/nagoyajo/honmarugoten/">官方影片</a></div></div></div>
+          <div class="slot"><div class="time">15:30</div><div><h4>大須商店街</h4><p>逛街、小吃、甜點與藥妝，雨天也比戶外景點好調整。</p><div class="video-links"><a class="video-link" href="https://www.youtube.com/results?search_query=Osu+Shopping+Street+Nagoya+shorts">大須 Shorts</a><a class="video-link" href="https://www.tiktok.com/search?q=Osu%20Shopping%20Street%20Nagoya">TikTok 預覽</a></div></div></div>
+          <div class="slot"><div class="time">17:30</div><div><h4>榮 / Oasis 21 夜景</h4><p>如果體力夠，傍晚去拍夜景；累了就直接回名古屋站。</p><div class="video-links"><a class="video-link" href="https://www.youtube.com/results?search_query=Oasis+21+Nagoya+night+view+shorts">Oasis 21 Shorts</a><a class="video-link" href="https://www.tiktok.com/search?q=Oasis%2021%20Nagoya%20night">TikTok 預覽</a><a class="video-link" href="https://www.sakaepark.co.jp/oasis21view/">官方拍照點</a></div></div></div>
+          <div class="slot"><div class="time">19:00</div><div><h4>名古屋站晚餐與整理行李</h4><p>晚餐不要排太遠，回飯店整理 6/8 退房與吉卜力隨身包。</p><div class="video-links"><a class="video-link" href="https://www.youtube.com/results?search_query=Nagoya+Station+dinner+shorts">名古屋站晚餐 Shorts</a><a class="video-link" href="https://www.tiktok.com/search?q=Nagoya%20Station%20dinner">TikTok 預覽</a></div></div></div>
         </div>
       </article>
 
