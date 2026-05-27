@@ -488,6 +488,174 @@
 
     .note-band p { margin: 0; color: rgba(255,255,255,0.86); }
 
+    .poster {
+      background: #fffaf2;
+      border: 2px solid #efd8c9;
+      border-radius: 14px;
+      padding: 22px;
+      box-shadow: 0 16px 34px rgba(112, 82, 62, 0.14);
+    }
+
+    .poster-head {
+      text-align: center;
+      margin-bottom: 18px;
+    }
+
+    .poster-head h2 {
+      font-size: clamp(2rem, 5vw, 4rem);
+      color: #4b2f22;
+      margin: 0;
+      line-height: 1.05;
+    }
+
+    .poster-ribbon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 10px;
+      padding: 7px 18px;
+      border-radius: 999px;
+      background: #e98574;
+      color: white;
+      font-weight: 850;
+      letter-spacing: 0;
+    }
+
+    .poster-rows {
+      display: grid;
+      gap: 12px;
+    }
+
+    .poster-row {
+      display: grid;
+      grid-template-columns: 132px 1fr;
+      gap: 12px;
+      border: 1px solid #ecd9ca;
+      border-radius: 12px;
+      background: white;
+      overflow: hidden;
+    }
+
+    .poster-row.day-1 { background: #fff4f3; }
+    .poster-row.day-2 { background: #fff9e8; }
+    .poster-row.day-3 { background: #eff8ef; }
+    .poster-row.day-4 { background: #eef6ff; }
+
+    .poster-day {
+      padding: 16px 12px;
+      display: grid;
+      align-content: center;
+      justify-items: center;
+      gap: 4px;
+      color: white;
+      font-weight: 900;
+      text-align: center;
+    }
+
+    .day-1 .poster-day { background: #ef6f73; }
+    .day-2 .poster-day { background: #e1a937; }
+    .day-3 .poster-day { background: #65a86f; }
+    .day-4 .poster-day { background: #4f91c6; }
+
+    .poster-day strong {
+      font-size: 1.24rem;
+      line-height: 1;
+    }
+
+    .poster-day span {
+      font-size: 0.94rem;
+    }
+
+    .poster-flow {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: minmax(138px, 1fr);
+      gap: 10px;
+      align-items: stretch;
+      overflow-x: auto;
+      padding: 14px;
+      scroll-snap-type: x proximity;
+    }
+
+    .poster-stop {
+      min-height: 148px;
+      border: 1px dashed rgba(104, 84, 73, 0.28);
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.78);
+      padding: 12px;
+      display: grid;
+      align-content: start;
+      justify-items: center;
+      text-align: center;
+      position: relative;
+      scroll-snap-align: start;
+    }
+
+    .poster-stop:not(:last-child)::after {
+      content: "→";
+      position: absolute;
+      right: -14px;
+      top: 48%;
+      transform: translateY(-50%);
+      color: #8a6a58;
+      font-weight: 900;
+      z-index: 1;
+    }
+
+    .poster-icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 16px;
+      background: #fff;
+      display: grid;
+      place-items: center;
+      font-size: 1.8rem;
+      box-shadow: inset 0 0 0 1px #ead8c8;
+      margin-bottom: 8px;
+    }
+
+    .poster-stop h3 {
+      margin: 0;
+      font-size: 0.98rem;
+      line-height: 1.25;
+      color: #33251f;
+    }
+
+    .poster-stop p {
+      margin: 6px 0 0;
+      color: #746354;
+      font-size: 0.82rem;
+      line-height: 1.35;
+    }
+
+    .poster-time {
+      display: inline-flex;
+      margin-top: 8px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: #fff7d8;
+      border: 1px solid #eadca4;
+      color: #6f5222;
+      font-size: 0.78rem;
+      font-weight: 850;
+    }
+
+    .poster-footer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .poster-note {
+      border: 1px solid #ecd9ca;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.82);
+      padding: 13px 15px;
+      color: #5e4b3d;
+      font-size: 0.92rem;
+    }
+
     footer {
       color: var(--muted);
       border-top: 1px solid var(--line);
@@ -497,7 +665,7 @@
     }
 
     @media (max-width: 920px) {
-      .quickbar, .restaurants, .grid-two, .note-band {
+      .quickbar, .restaurants, .grid-two, .note-band, .poster-footer {
         grid-template-columns: 1fr 1fr;
       }
       .day-tabs {
@@ -509,9 +677,12 @@
     @media (max-width: 680px) {
       .hero { min-height: 68vh; }
       .hero-inner { padding-bottom: 44px; }
-      .quickbar, .restaurants, .grid-two, .note-band, .slot, .detail-head {
+      .quickbar, .restaurants, .grid-two, .note-band, .slot, .detail-head, .poster-row, .poster-footer {
         grid-template-columns: 1fr;
       }
+      .poster { padding: 14px; }
+      .poster-flow { grid-auto-columns: minmax(132px, 72%); }
+      .poster-stop:not(:last-child)::after { display: none; }
       .quickbar { margin-top: 14px; }
       .quickitem { box-shadow: none; }
       main { margin-top: 34px; }
@@ -550,6 +721,65 @@
   </div>
 
   <main>
+    <section class="poster" aria-label="名古屋懶人圖版行程表">
+      <div class="poster-head">
+        <h2>名古屋 4 天 3 夜行程規劃</h2>
+        <div class="poster-ribbon">2026/06/05 - 06/08 一起出發</div>
+      </div>
+      <div class="poster-rows">
+        <article class="poster-row day-1">
+          <div class="poster-day"><strong>DAY 1</strong><span>6/5（五）</span><span>抵達日</span></div>
+          <div class="poster-flow">
+            <div class="poster-stop"><div class="poster-icon">✈</div><h3>中部機場</h3><p>06:05 抵達 NGO</p><span class="poster-time">入境 60-90 分</span></div>
+            <div class="poster-stop"><div class="poster-icon">🚆</div><h3>名鐵 μ-SKY</h3><p>往名古屋站</p><span class="poster-time">約 28 分</span></div>
+            <div class="poster-stop"><div class="poster-icon">🏨</div><h3>飯店寄行李</h3><p>JR Gate Tower 15F</p><span class="poster-time">08:15-08:45</span></div>
+            <div class="poster-stop"><div class="poster-icon">🏭</div><h3>豐田產業技術紀念館</h3><p>室內主景點</p><span class="poster-time">1.5-2 小時</span></div>
+            <div class="poster-stop"><div class="poster-icon">☕</div><h3>則武之森午餐</h3><p>咖啡、購物、休息</p><span class="poster-time">1.5-2 小時</span></div>
+            <div class="poster-stop"><div class="poster-icon">🌙</div><h3>名古屋站晚餐</h3><p>早點回飯店休息</p><span class="poster-time">18:30</span></div>
+          </div>
+        </article>
+
+        <article class="poster-row day-2">
+          <div class="poster-day"><strong>DAY 2</strong><span>6/6（六）</span><span>犬山＋慶生</span></div>
+          <div class="poster-flow">
+            <div class="poster-stop"><div class="poster-icon">🚃</div><h3>名鐵名古屋</h3><p>從飯店出發</p><span class="poster-time">08:30</span></div>
+            <div class="poster-stop"><div class="poster-icon">🏯</div><h3>犬山城</h3><p>國寶城與木造天守</p><span class="poster-time">1-1.5 小時</span></div>
+            <div class="poster-stop"><div class="poster-icon">⛩</div><h3>三光稻荷神社</h3><p>愛心繪馬、拍照</p><span class="poster-time">30-45 分</span></div>
+            <div class="poster-stop"><div class="poster-icon">🍡</div><h3>犬山城下町</h3><p>午餐、小吃、老街</p><span class="poster-time">2-2.5 小時</span></div>
+            <div class="poster-stop"><div class="poster-icon">🌉</div><h3>木曾川散步</h3><p>太熱可刪減</p><span class="poster-time">45-60 分</span></div>
+            <div class="poster-stop"><div class="poster-icon">🍽</div><h3>慶生晚餐</h3><p>回名古屋站周邊</p><span class="poster-time">18:30-19:00</span></div>
+          </div>
+        </article>
+
+        <article class="poster-row day-3">
+          <div class="poster-day"><strong>DAY 3</strong><span>6/7（日）</span><span>市區經典</span></div>
+          <div class="poster-flow">
+            <div class="poster-stop"><div class="poster-icon">⛩</div><h3>熱田神宮</h3><p>早上參拜散步</p><span class="poster-time">1-1.5 小時</span></div>
+            <div class="poster-stop"><div class="poster-icon">🍱</div><h3>鰻魚飯午餐</h3><p>名古屋名物候選</p><span class="poster-time">11:45</span></div>
+            <div class="poster-stop"><div class="poster-icon">🏯</div><h3>名古屋城</h3><p>本丸御殿與城景</p><span class="poster-time">1.5-2 小時</span></div>
+            <div class="poster-stop"><div class="poster-icon">🛍</div><h3>大須商店街</h3><p>逛街、小吃、藥妝</p><span class="poster-time">1.5-2 小時</span></div>
+            <div class="poster-stop"><div class="poster-icon">🌃</div><h3>Oasis 21 夜景</h3><p>水之宇宙船拍照</p><span class="poster-time">30-45 分</span></div>
+            <div class="poster-stop"><div class="poster-icon">🧳</div><h3>整理行李</h3><p>準備隔天退房</p><span class="poster-time">晚上</span></div>
+          </div>
+        </article>
+
+        <article class="poster-row day-4">
+          <div class="poster-day"><strong>DAY 4</strong><span>6/8（一）</span><span>吉卜力＋移動</span></div>
+          <div class="poster-flow">
+            <div class="poster-stop"><div class="poster-icon">🏨</div><h3>退房寄行李</h3><p>大行李留飯店</p><span class="poster-time">07:30</span></div>
+            <div class="poster-stop"><div class="poster-icon">🚇</div><h3>前往吉卜力</h3><p>東山線＋Linimo</p><span class="poster-time">08:45</span></div>
+            <div class="poster-stop"><div class="poster-icon">🎬</div><h3>吉卜力公園</h3><p>依票券區域遊園</p><span class="poster-time">10:00-16:00</span></div>
+            <div class="poster-stop"><div class="poster-icon">🏨</div><h3>回飯店拿行李</h3><p>直結名古屋站</p><span class="poster-time">17:10</span></div>
+            <div class="poster-stop"><div class="poster-icon">🚄</div><h3>新幹線往東京</h3><p>建議名古屋到品川</p><span class="poster-time">18:00-18:30</span></div>
+          </div>
+        </article>
+      </div>
+      <div class="poster-footer">
+        <div class="poster-note"><strong>行程原則：</strong>第一天紅眼班機清晨抵達，15:00 入住後保留休息，不排太晚。</div>
+        <div class="poster-note"><strong>備案：</strong>下雨或太累時，優先刪散步與購物，保留交通、飯店、餐廳訂位。</div>
+      </div>
+    </section>
+
     <section>
       <div class="section-head">
         <h2>每日行程卡</h2>
